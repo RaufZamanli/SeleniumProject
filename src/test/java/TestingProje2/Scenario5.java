@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class Senaryo5 extends BaseDriver {
+public class Scenario5 extends BaseDriver {
     @Test
 
     public void Test() {

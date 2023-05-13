@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 
-public class Senaryo4 extends BaseDriver {
+public class Scenario4 extends BaseDriver {
 
     @Test
     public void Senaryo4(){

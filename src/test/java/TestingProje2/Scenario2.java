@@ -12,12 +12,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class Senaryo1 extends BaseDriver {
+public class Scenario2 extends BaseDriver {
 
     @Test
 
-    public void Test()
-    {
+    public void Test() {
         driver.get("https://demowebshop.tricentis.com/");
 
         WebElement register = driver.findElement(By.linkText("Register"));
@@ -53,14 +52,12 @@ public class Senaryo1 extends BaseDriver {
         action=actions.moveToElement(registerButton).click().build();
         action.perform();
 
-        WebElement confirmation= driver.findElement(By.xpath("//div[@class='result']"));
-
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='result']")));
+        WebElement confirmation= driver.findElement(By.xpath("//div[@class='validation-summary-errors']//li"));
 
 
-        Assert.assertEquals("Your registration completed", confirmation.getText());
+        Assert.assertEquals("The specified email already exists", confirmation.getText());
 
         WaitClose();
-    }
 
+    }
 }
