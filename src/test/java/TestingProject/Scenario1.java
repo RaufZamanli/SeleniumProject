@@ -1,4 +1,4 @@
-package TestingProje2;
+package TestingProject;
 
 import Utility.BaseDriver;
 import org.junit.Assert;

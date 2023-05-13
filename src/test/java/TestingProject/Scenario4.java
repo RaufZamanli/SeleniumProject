@@ -1,4 +1,4 @@
-package TestingProje2;
+package TestingProject;
 
 import Utility.BaseDriver;
 import org.junit.Assert;
@@ -8,10 +8,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 
-public class Scenario3 extends BaseDriver {
-    @Test
+public class Scenario4 extends BaseDriver {
 
-    public void Test() {
+    @Test
+    public void Senaryo4(){
         driver.get("https://demowebshop.tricentis.com/");
 
         Actions actions = new Actions(driver);
@@ -32,10 +32,11 @@ public class Scenario3 extends BaseDriver {
         action=actions.moveToElement(login2).click().build();
         action.perform();
 
-        WebElement confirmation = driver.findElement(By.linkText("kate456@gmail.com"));
+        WebElement loginFailed= driver.findElement(By.xpath("//span[text()='Login was unsuccessful. Please correct the errors and try again.']"));
 
-        Assert.assertTrue("Fail", confirmation.getText().contains("kate456@gmail.com"));
+        Assert.assertTrue("Failed", loginFailed.getText().contains("unsuccessful"));
 
         WaitClose();
-}
+    }
+
 }
